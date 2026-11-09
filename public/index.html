@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Mandate — payments control plane for AI agents</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/vendor/ag-grid/ag-grid.min.css">
+<link rel="stylesheet" href="/vendor/ag-grid/ag-theme-quartz.min.css">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<a class="skip" href="#view">Skip to content</a>
+
+<div id="login" class="login" hidden>
+  <form id="loginForm" class="login-card" autocomplete="off">
+    <span class="brandmark" data-size="56"></span><span class="stamp bad" aria-hidden="true">Signed</span>
+    <h1>Mandate</h1>
+    <p class="hint">Operator console. Paste the admin token printed in your terminal when the server started.</p>
+    <label for="token">Admin token</label>
+    <input id="token" name="token" type="password" required autocomplete="off" spellcheck="false">
+    <button class="btn primary" type="submit"><span data-ic="key"></span>Sign in</button>
+    <p id="loginErr" class="err" role="alert"></p>
+    <p class="hint">Shopping as a customer? <a href="/shop.html">Open the storefront</a> — no sign-in needed.</p>
+  </form>
+</div>
+
+<div id="app" class="shell" hidden>
+  <aside class="side">
+    <div class="brand"><span class="brandmark" data-size="38"></span><div><b>Mandate</b><small>agent payments control plane</small></div></div>
+    <nav id="nav" aria-label="Sections"></nav>
+    <div class="side-foot">
+      <button id="paletteBtn" class="btn ghost small"><span data-ic="command"></span>Commands <span class="kbd">Ctrl K</span></button>
+      <div id="badges" class="badges" aria-live="polite"></div>
+      <a class="btn ghost small" href="/shop.html" target="_blank" rel="noopener"><span data-ic="store"></span>Storefront</a>
+      <button id="logout" class="btn ghost small"><span data-ic="logout"></span>Sign out</button>
+    </div>
+  </aside>
+  <main id="view" tabindex="-1"></main>
+</div>
+<div id="toast" role="status" aria-live="polite"></div>
+<script src="/vendor/ag-grid/ag-grid-community.min.js"></script>
+<script src="/app.js" type="module"></script>
+</body>
+</html>

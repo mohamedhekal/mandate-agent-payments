@@ -1,0 +1,52 @@
+// Bundled line-icon set (24×24, stroke = currentColor). Inline SVG keeps the strict CSP (no CDN, no fonts, no images).
+const P = {
+  gauge: '<path d="M12 14l4-5"/><path d="M3.5 17a9 9 0 1 1 17 0"/><circle cx="12" cy="14" r="1.2"/>',
+  hand: '<path d="M8 12V5.5a1.5 1.5 0 0 1 3 0V11"/><path d="M11 10V4.5a1.5 1.5 0 0 1 3 0V11"/><path d="M14 10V6.5a1.5 1.5 0 0 1 3 0V13"/><path d="M8 12.5l-1.6-1.8a1.5 1.5 0 0 0-2.3 1.9L7 18a6 6 0 0 0 5 3h1.5a5.5 5.5 0 0 0 5.500-5.500V10"/>',
+  shield: '<path d="M12 3l7.500 3v5.500c0 4.500-3.200 8-7.500 9.500C7.700 19.500 4.500 16 4.500 11.500V6z"/><path d="M9 12l2.200 2.200L15.500 10"/>',
+  play: '<rect x="3" y="4" width="18" height="16" rx="3"/><path d="M10 9l5 3-5 3z"/>',
+  cart: '<circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/><path d="M2.500 3.500H5l2.200 11h11l1.800-8H6.200"/>',
+  lock: '<rect x="4.500" y="10.500" width="15" height="10" rx="2.500"/><path d="M8 10.500V8a4 4 0 0 1 8 0v2.500"/><path d="M12 14.500v2.200"/>',
+  scroll: '<path d="M8 3.500h10a2 2 0 0 1 2 2V8H10V5.500a2 2 0 0 0-2-2z"/><path d="M8 3.500a2 2 0 0 0-2 2V19a1.500 1.500 0 0 0 3 0V8h11"/><path d="M9 19h9a2 2 0 0 0 2-2v-1.500"/>',
+  card: '<rect x="2.500" y="5" width="19" height="14" rx="3"/><path d="M2.500 10h19"/><path d="M6.500 15h3"/>',
+  check: '<path d="M5 12.500l4.500 4.500L19 7.500"/>',
+  x: '<path d="M6 6l12 12M18 6L6 18"/>',
+  alert: '<path d="M12 3.500l9.500 16.500h-19z"/><path d="M12 10v4.500"/><circle cx="12" cy="17.300" r=".6"/>',
+  bot: '<rect x="4.500" y="8" width="15" height="11.500" rx="3.500"/><path d="M12 8V4.500"/><circle cx="12" cy="3.600" r="1"/><circle cx="9" cy="13.500" r="1.100"/><circle cx="15" cy="13.500" r="1.100"/><path d="M2.500 13v2M21.500 13v2"/>',
+  user: '<circle cx="12" cy="8" r="3.500"/><path d="M5 20c.8-3.600 3.500-5.500 7-5.500s6.200 1.900 7 5.500"/>',
+  key: '<circle cx="8" cy="15" r="4"/><path d="M11 12l8.500-8.500"/><path d="M16.500 6.500l2.500 2.500"/><path d="M14 9l2 2"/>',
+  refresh: '<path d="M20 11a8 8 0 0 0-14.200-4.300L4 9"/><path d="M4 4v5h5"/><path d="M4 13a8 8 0 0 0 14.200 4.300L20 15"/><path d="M20 20v-5h-5"/>',
+  undo: '<path d="M9 14L4 9l5-5"/><path d="M4 9h10.500a5.500 5.500 0 0 1 0 11H11"/>',
+  sparkles: '<path d="M12 3l1.800 5.200L19 10l-5.200 1.800L12 17l-1.800-5.200L5 10l5.200-1.800z"/><path d="M19 16l.8 2.200L22 19l-2.200.8L19 22l-.8-2.200L16 19l2.200-.8z"/>',
+  send: '<path d="M21 3L3 10.500l7 2.500 2.500 7z"/><path d="M10 13l11-10"/>',
+  external: '<path d="M14 4h6v6"/><path d="M20 4l-9 9"/><path d="M18 14v4.500a1.500 1.500 0 0 1-1.500 1.500h-11A1.500 1.500 0 0 1 4 18.500v-11A1.500 1.500 0 0 1 5.500 6H10"/>',
+  zap: '<path d="M13 2.500L4.500 13.500H11l-1 8 8.500-11H12z"/>',
+  receipt: '<path d="M6 3h12v18l-3-1.800L12 21l-3-1.800L6 21z"/><path d="M9 8h6M9 12h6"/>',
+  coins: '<ellipse cx="9" cy="7" rx="5.500" ry="3"/><path d="M3.500 7v4c0 1.700 2.500 3 5.500 3"/><path d="M3.500 11v4c0 1.700 2.500 3 5.500 3"/><path d="M15 11.200c3 .2 5.500 1.400 5.500 2.800v4c0 1.700-2.500 3-5.500 3s-5.500-1.300-5.500-3v-4"/>',
+  trend: '<path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/>',
+  clock: '<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',
+  ban: '<circle cx="12" cy="12" r="9"/><path d="M5.600 5.600l12.800 12.800"/>',
+  fingerprint: '<path d="M6 10.500a6 6 0 0 1 12 0"/><path d="M4 14c0-.8 0-1.700.2-2.500"/><path d="M8 20.500c.8-2 1-4 1-6a3 3 0 0 1 6 0c0 3-.5 5-1.500 7"/><path d="M12 14.500c0 2.500-.3 4.500-1 6.500"/><path d="M19.500 14.500c0 1.800-.2 3.500-.7 5"/>',
+  link: '<path d="M10 14a4 4 0 0 0 5.700 0l3-3A4 4 0 0 0 13 5.300l-1 1"/><path d="M14 10a4 4 0 0 0-5.700 0l-3 3A4 4 0 0 0 11 18.700l1-1"/>',
+  store: '<path d="M3.500 9l1.500-5h14l1.500 5"/><path d="M3.500 9a2.800 2.800 0 0 0 5.500 0 2.800 2.800 0 0 0 6 0 2.800 2.800 0 0 0 5.500 0"/><path d="M5 12v8.500h14V12"/><path d="M10 20.500v-5h4v5"/>',
+  logout: '<path d="M9 4H6a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h3"/><path d="M16 8l4 4-4 4"/><path d="M20 12H9"/>',
+  package: '<path d="M12 3l8.500 4.500v9L12 21l-8.500-4.500v-9z"/><path d="M3.500 7.500L12 12l8.500-4.500"/><path d="M12 12v9"/>',
+  pen: '<path d="M4 20l1-4L16.500 4.500a2.100 2.100 0 0 1 3 3L8 19z"/><path d="M14.500 6.500l3 3"/>',
+  chart: '<path d="M4 20V4"/><path d="M4 20h16"/><rect x="7.500" y="12" width="3" height="5.500" rx=".8"/><rect x="12.500" y="8" width="3" height="9.500" rx=".8"/><rect x="17.500" y="5" width="2.500" height="12.500" rx=".8"/>',
+  search: '<circle cx="11" cy="11" r="6.500"/><path d="M20 20l-4.200-4.200"/>',
+  download: '<path d="M12 4v11"/><path d="M7.500 11l4.500 4.500 4.500-4.500"/><path d="M5 20h14"/>',
+  printer: '<path d="M7 9V4h10v5"/><rect x="4" y="9" width="16" height="8" rx="2"/><path d="M7 14h10v6H7z"/>',
+  power: '<path d="M12 3v8"/><path d="M6.500 6.500a8 8 0 1 0 11 0"/>',
+  eye: '<path d="M2.500 12S6 5.500 12 5.500 21.500 12 21.500 12 18 18.500 12 18.500 2.500 12 2.500 12z"/><circle cx="12" cy="12" r="2.800"/>',
+  command: '<path d="M9 9V6.500A2.500 2.500 0 1 0 6.500 9H9m0 0h6m-6 0v6m6-6V6.500A2.500 2.500 0 1 1 17.500 9H15m0 0v6m0 0h2.500a2.500 2.500 0 1 1-2.500 2.500V15m0 0H9m0 0H6.500A2.500 2.500 0 1 0 9 17.500V15"/>',
+  clipboard: '<rect x="5" y="4.500" width="14" height="16.500" rx="2.500"/><path d="M9 4.500V4a1.500 1.500 0 0 1 1.500-1.500h3A1.500 1.500 0 0 1 15 4v.500"/><path d="M8.500 11h7M8.500 15h5"/>',
+  flask: '<path d="M9.500 3.500h5"/><path d="M10 3.500v6L4.800 18.200A2 2 0 0 0 6.500 21h11a2 2 0 0 0 1.700-2.800L14 9.500v-6"/><path d="M7.800 15h8.400"/>',
+  filter: '<path d="M4 5h16l-6 7.500V19l-4 1.500v-8z"/>',
+  siren: '<path d="M7 18v-6a5 5 0 0 1 10 0v6"/><path d="M5 18h14v3H5z"/><path d="M12 3v2M4.500 6.500l1.400 1.400M19.500 6.500l-1.400 1.400"/>',
+  info: '<circle cx="12" cy="12" r="9"/><path d="M12 11v5.500"/><circle cx="12" cy="7.800" r=".6"/>',
+};
+
+export const icon = (name, size = 18, cls = '') =>
+  `<svg class="ic ${cls}" width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">${P[name] || ''}</svg>`;
+
+/** The product mark: an "M" drawn as a signature stroke inside a seal. */
+export const mark = (size = 36) => `<svg class="mark" width="${size}" height="${size}" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="var(--seal)"/><circle cx="20" cy="20" r="15.500" fill="none" stroke="#fff" stroke-opacity=".35" stroke-dasharray="1.500 2.200"/><path d="M11.500 27V13.500l8.500 10 8.500-10V27" fill="none" stroke="#fff" stroke-width="3.200" stroke-linecap="round" stroke-linejoin="round"/></svg>`;

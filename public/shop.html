@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Demo Data &amp; Design Store — pay with PayPal (sandbox)</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body class="shopbody">
+<header class="shop-top">
+  <div class="brand"><span class="brandmark" data-size="38"></span><div><b>Demo Data &amp; Design Store</b><small>Sandbox storefront — no real money moves</small></div></div>
+  <span id="mode" class="badge"></span>
+</header>
+<div class="shop-hero"><h1>Datasets, compute and design — bought by people and by agents.</h1><p>Check out with PayPal. AI agents buy from the same shelf, but only inside the spending mandate their owner signed.</p></div>
+<main class="shop">
+  <section aria-labelledby="h-products">
+    <h2 id="h-products">Products</h2>
+    <p class="hint">Humans check out here. AI agents buy the same products through their governed Mandate — prices always come from this catalog.</p>
+    <div id="products" class="products"></div>
+  </section>
+  <section class="card" aria-labelledby="h-order">
+    <h2 id="h-order">Your order</h2>
+    <form id="orderForm" autocomplete="on">
+      <label for="email">Email (used to look up your order and request refunds)</label>
+      <input id="email" type="email" required placeholder="you@example.com">
+      <p id="selected" class="hint">Choose a product ↑</p>
+      <button class="btn primary" type="submit" disabled id="buy">Checkout with PayPal</button>
+    </form>
+    <div id="orderBox" hidden></div>
+  </section>
+</main>
+<div id="toast" role="status" aria-live="polite"></div>
+<script src="/shop.js" type="module"></script>
+</body>
+</html>

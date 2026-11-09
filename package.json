@@ -1,0 +1,15 @@
+{
+  "name": "mandate-agent-payments",
+  "version": "1.0.0",
+  "description": "Mandate: spending mandates, AI risk review and milestone escrow for AI agents that pay with PayPal (sandbox).",
+  "type": "module",
+  "license": "MIT",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "test": "node --test test/*.test.js",
+    "demo": "node scripts/demo.js",
+    "mcp": "node src/mcp.js"
+  }
+}

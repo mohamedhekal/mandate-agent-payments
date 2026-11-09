@@ -1,0 +1,24 @@
+services:
+  - type: web
+    name: mandate-demo
+    runtime: node
+    plan: free
+    buildCommand: "echo no build step"
+    startCommand: npm start
+    healthCheckPath: /shop.html
+    envVars:
+      - key: HOST
+        value: 0.0.0.0
+      - key: DATA_FILE
+        value: /tmp/state.json
+      - key: MANDATE_SECRET
+        generateValue: true
+      # Public judge demo: SIMULATED PayPal sandbox only, nothing sensitive inside.
+      # Put this token in your Devpost "testing instructions" so judges can sign in.
+      - key: ADMIN_TOKEN
+        value: judge-demo-2026
+      - key: TRUST_PROXY
+        value: "1"
+      - key: PUBLIC_URL
+        sync: false
+      # NEVER add PAYPAL_* keys to a public service.
