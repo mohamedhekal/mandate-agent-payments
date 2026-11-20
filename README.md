@@ -1,7 +1,7 @@
 # Mandate — the payments control plane for AI agents, powered by PayPal
 
 [![M8ven Score](https://m8ven.ai/badge/mcp/mohamedhekal-mandate-agent-payments-ij4lyd?v=59bac3e312a4b066cbc10178710605d8)](https://m8ven.ai/mcp/mohamedhekal-mandate-agent-payments-ij4lyd?s=readme)
-
+[![M8ven Score](https://m8ven.ai/badge/mcp/mohamedhekal/mandate-agent-payments)](https://m8ven.ai/mcp/mohamedhekal/mandate-agent-payments?s=readme)
 > One platform for the whole agentic-commerce loop: **governed agent payments · a PayPal-checkout storefront agents and humans can buy from · AI-triaged refunds · milestone escrow · a merchant finance copilot · SaaS plans billed via PayPal Subscriptions**.
 >
 > AI agents are about to spend real money. **Mandate** is the layer that lets you say *"yes, spend — but only like this"*, and *proves* it: signed spending mandates, hard-rule policy, an AI risk reviewer that cannot be talked out of the rules, human approval when it matters, milestone escrow, and a tamper-evident audit trail — all settled through the **PayPal developer platform (sandbox)**.
