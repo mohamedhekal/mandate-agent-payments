@@ -4,7 +4,29 @@
   "description": "Mandate: spending mandates, AI risk review and milestone escrow for AI agents that pay with PayPal (sandbox).",
   "type": "module",
   "license": "MIT",
-  "engines": { "node": ">=20" },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mohamedhekal/mandate-agent-payments.git"
+  },
+  "homepage": "https://github.com/mohamedhekal/mandate-agent-payments#readme",
+  "bugs": {
+    "url": "https://github.com/mohamedhekal/mandate-agent-payments/issues"
+  },
+  "keywords": [
+    "mcp",
+    "ai-agents",
+    "paypal",
+    "payments",
+    "guardrails",
+    "escrow",
+    "audit"
+  ],
+  "bin": {
+    "mandate-mcp": "src/mcp.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
     "start": "node src/server.js",
     "dev": "node --watch src/server.js",
