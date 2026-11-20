@@ -165,4 +165,4 @@ docs/               analysis, Devpost submission text, video script, competition
 - State is a JSON file (single process). Fine for a prototype; use a database for multi-instance.
 - The heuristic reviewer is intentionally simple and explainable; the Claude reviewer is where nuanced judgment comes from.
 
-MIT licensed — see [LICENSE](LICENSE).
+MIT licensed — see [LICENSE](LICENSE). Data handling: see [PRIVACY.md](PRIVACY.md).

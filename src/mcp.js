@@ -12,11 +12,13 @@ export const TOOLS = [
   {
     name: 'get_mandate_status',
     description: 'Show your spending mandate: remaining budget, per-transaction limit, allowed categories/payees and the amount above which a human must approve.',
+    annotations: { title: 'Get mandate status', readOnlyHint: true, destructiveHint: false, idempotentHint: true, openWorldHint: false },
     inputSchema: { type: 'object', properties: {}, additionalProperties: false },
   },
   {
     name: 'request_payment',
     description: 'Ask to pay someone (PayPal Payout, sandbox). The request is checked against your mandate and an AI risk reviewer. Result is "executed", "pending_approval" (a human must approve) or "denied" with reasons. Never retry a denied payment with altered wording.',
+    annotations: { title: 'Request payment', readOnlyHint: false, destructiveHint: true, idempotentHint: false, openWorldHint: true },
     inputSchema: {
       type: 'object',
       properties: {
@@ -33,16 +35,19 @@ export const TOOLS = [
   {
     name: 'list_catalog',
     description: 'List products you can buy from the PayPal-checkout store (prices are fixed server-side).',
+    annotations: { title: 'List catalog', readOnlyHint: true, destructiveHint: false, idempotentHint: true, openWorldHint: false },
     inputSchema: { type: 'object', properties: {}, additionalProperties: false },
   },
   {
     name: 'purchase_item',
     description: 'Buy a catalog item under your mandate. Checked by hard rules + AI review; the price always comes from the catalog.',
+    annotations: { title: 'Purchase item', readOnlyHint: false, destructiveHint: true, idempotentHint: false, openWorldHint: true },
     inputSchema: { type: 'object', properties: { sku: { type: 'string' }, qty: { type: 'integer', minimum: 1, maximum: 10 } }, required: ['sku'] },
   },
   {
     name: 'create_escrow',
     description: 'Hire a contractor with milestone escrow: funds are authorised once and released per milestone only after an AI verifier confirms the acceptance criteria.',
+    annotations: { title: 'Create escrow', readOnlyHint: false, destructiveHint: false, idempotentHint: false, openWorldHint: true },
     inputSchema: {
       type: 'object',
       properties: {
@@ -55,6 +60,7 @@ export const TOOLS = [
   {
     name: 'submit_deliverable',
     description: 'Submit completed work for an escrow milestone so the verifier can release payment.',
+    annotations: { title: 'Submit deliverable', readOnlyHint: false, destructiveHint: true, idempotentHint: false, openWorldHint: true },
     inputSchema: { type: 'object', properties: { escrowId: { type: 'string' }, milestoneId: { type: 'string' }, deliverable: { type: 'string' } }, required: ['escrowId', 'milestoneId', 'deliverable'] },
   },
 ];
